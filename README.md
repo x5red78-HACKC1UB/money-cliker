@@ -1,2 +1,2 @@
 # candy-cliker
-A recreation of Candy Cliker
+A recreation of Money Cliker
