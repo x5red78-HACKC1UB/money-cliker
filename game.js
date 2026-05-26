@@ -36,19 +36,6 @@ const craftybutton= document.getElementById("craft");
 const craftcontainer=document.getElementById("craftingcontainer")
 const coinsound= new Audio;
 coinsound.src="lol.wav";
-let inventory={
-  nature:0,
-  mineral:0,
-  light:0,
-  dark:0,
-  game:0,
-}
-const recipes=[      //format.   {input:["",""] , output:[""] },
-  {input:["nature","mineral"] , output:["Nature's Ring"] },
-  {input:["nature","light"] , output:["Ascended Roots"] },
-  
-
-]
 let currentTracky = 0;
 const PLAYLIST=[
 "bg.wav",
@@ -342,8 +329,9 @@ achievementsBtn.addEventListener("click", () => {
 
 let achievements = [
   { name: "First Click", unlocked: false, condition: () => money >= 1 },
-  { name: "100 Candy", unlocked: false, condition: () => money >= 100 }, //achievements layout{ name: , unlocked:false , condition: () =>  }
-  { name: "1,000 Candy", unlocked: false, condition: () => money >= 1000 },
+  { name: "100 Money", unlocked: false, condition: () => money >= 100 }, //achievements layout{ name: , unlocked:false , condition: () =>  }
+  { name: "1,000 Money", unlocked: false, condition: () => money >= 1000 },
+  { name: "10,000 Money", unlocked:false, condition: ()=>money >= 100000 },
 { name:"Gotcha!" , unlocked:false , condition: () => coins>=1 },
 { name:"Coin Collector" , unlocked:false , condition: () => coins>=10 },
 { name:"100 clicks" , unlocked:false , condition: () => clicks>=100 },
@@ -352,7 +340,7 @@ let achievements = [
 { name:"Prestige" , unlocked:false , condition: () =>gold>=1  },
 { name:"Ultra presige" , unlocked:false , condition: () => gems>=1 },
 { name:"Powerclick" , unlocked:false , condition: () =>mpc>=1000  },
-333
+
 ];
 
 function checkachievementssteamhappy() {
