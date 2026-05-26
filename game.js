@@ -352,7 +352,7 @@ let achievements = [
 { name:"Prestige" , unlocked:false , condition: () =>gold>=1  },
 { name:"Ultra presige" , unlocked:false , condition: () => gems>=1 },
 { name:"Powerclick" , unlocked:false , condition: () =>mpc>=1000  },
-333
+
 ];
 
 function checkachievementssteamhappy() {
