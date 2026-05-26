@@ -14,7 +14,7 @@ let prestige=0;
 let gold=0;
 let clickspeed=0;
 let muted=false;
-let multiplier=0;
+let multiplier=1;
 let ultraprestige=0;
 let gems=0;
 
