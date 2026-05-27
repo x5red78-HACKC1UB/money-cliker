@@ -22,6 +22,7 @@ let gems=0;
 //consts
 const score = document.getElementById("moneyScore");
 const goldamount = document.getElementById("goldamount");
+const gemsamount = document.getElementById("gemsamount");
 const clicker = document.querySelector(".moneybtn");
 const shoptoggle = document.getElementById("shoponoff");
 const shopcontainer = document.querySelector(".shopcontainer");
