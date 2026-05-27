@@ -384,7 +384,7 @@ function oohshiny(){
 
  if(money> 5000) {
   money+=Math.floor(money*0.25);
-  coins=+1;
+  coins+=1;
    coinsound.play();
   scoretxt();
    checkachievementssteamhappy();
