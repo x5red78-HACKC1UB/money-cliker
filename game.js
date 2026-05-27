@@ -63,7 +63,8 @@ const PLAYLIST=[
  let bgsound = new Audio(PLAYLIST[currentTracky]);
 bgsound.loop=true;
 bgsound.volume = 0.42;
-bgsound.play();
+bgsound.play().catch(()=>{});
+
 document.getElementById("stereo").addEventListener("click", () => {
   currentTracky++;
 
@@ -74,10 +75,10 @@ document.getElementById("stereo").addEventListener("click", () => {
   bgsound = new Audio(PLAYLIST[currentTracky]);
   bgsound.loop = true;
   bgsound.volume = 0.20;
-  bgsound.play();
+  bgsound.play().catch(()=>{});
 });
 document.addEventListener("click", () => {
-  bgsound.play();
+  bgsound.play().catch(()=>{});
 }, { once: true });
 
 shutupbutton.addEventListener("click",()=>{
@@ -89,7 +90,8 @@ shutupbutton.addEventListener("click",()=>{
     coinsound.muted = true;
     shutupbutton.textContent = "Unmute";
   } else {
-    bgsound.play();
+   
+  bgsound.play().catch(()=>{});
     coinsound.muted = false;
     shutupbutton.textContent = "Mute";
   }
