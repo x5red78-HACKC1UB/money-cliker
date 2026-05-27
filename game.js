@@ -14,7 +14,7 @@ let prestige=0;
 let gold=0;
 let clickspeed=0;
 let muted=false;
-let multiplier=0;
+let multiplier=1;
 let ultraprestige=0;
 let gems=0;
 
@@ -22,6 +22,7 @@ let gems=0;
 //consts
 const score = document.getElementById("moneyScore");
 const goldamount = document.getElementById("goldamount");
+const gemsamount = document.getElementById("gemsamount");
 const clicker = document.querySelector(".moneybtn");
 const shoptoggle = document.getElementById("shoponoff");
 const shopcontainer = document.querySelector(".shopcontainer");
@@ -49,7 +50,8 @@ const PLAYLIST=[
  let bgsound = new Audio(PLAYLIST[currentTracky]);
 bgsound.loop=true;
 bgsound.volume = 0.42;
-bgsound.play();
+bgsound.play().catch(()=>{});
+
 document.getElementById("stereo").addEventListener("click", () => {
   currentTracky++;
 
@@ -60,10 +62,10 @@ document.getElementById("stereo").addEventListener("click", () => {
   bgsound = new Audio(PLAYLIST[currentTracky]);
   bgsound.loop = true;
   bgsound.volume = 0.20;
-  bgsound.play();
+  bgsound.play().catch(()=>{});
 });
 document.addEventListener("click", () => {
-  bgsound.play();
+  bgsound.play().catch(()=>{});
 }, { once: true });
 
 shutupbutton.addEventListener("click",()=>{
@@ -75,7 +77,8 @@ shutupbutton.addEventListener("click",()=>{
     coinsound.muted = true;
     shutupbutton.textContent = "Unmute";
   } else {
-    bgsound.play();
+   
+  bgsound.play().catch(()=>{});
     coinsound.muted = false;
     shutupbutton.textContent = "Mute";
   }
@@ -253,9 +256,9 @@ function buyitem(index) {
   }
 }
 const goldshopitems = [
-  { name: "Golden multiplier", gold: 1, startingmpc: 4 },
-  { name: "Golden Auto Clicker", gold: 10, clickspeed: 25 },
-  { name: "Money enhance", gold: 100, multiplier: 2 }
+  { name: "Golden multiplier", gold: 1,gems:0, startingmpc: 4 },
+  { name: "Golden Auto Clicker", gold: 10,gems:0,clickspeed: 25 },
+  { name: "Money enhance", gold: 100,gems:0,multiplier: 2 }
 ];
 function makegoldshoppy() {
   goldshop.innerHTML="";
@@ -371,7 +374,7 @@ function oohshiny(){
 
  if(money> 5000) {
   money+=Math.floor(money*0.25);
-  coins=+1;
+  coins+=1;
    coinsound.play();
   scoretxt();
    checkachievementssteamhappy();

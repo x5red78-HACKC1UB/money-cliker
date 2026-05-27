@@ -13,10 +13,11 @@ body {
     border: none; 
     padding: 0; 
     background: none; 
-    cursor: pointer; 
     transition: transform 0.2s ease; 
   } 
-  
+.moneybtn * {
+  pointer-events: none;
+}  
   .moneybtn:hover{ 
     transform: scale(1.1); 
   }
