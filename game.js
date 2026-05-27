@@ -267,9 +267,9 @@ function buyitem(index) {
   }
 }
 const goldshopitems = [
-  { name: "Golden multiplier", gold: 1, startingmpc: 4 },
-  { name: "Golden Auto Clicker", gold: 10, clickspeed: 25 },
-  { name: "Money enhance", gold: 100, multiplier: 2 }
+  { name: "Golden multiplier", gold: 1,gems:0, startingmpc: 4 },
+  { name: "Golden Auto Clicker", gold: 10,gems:0,clickspeed: 25 },
+  { name: "Money enhance", gold: 100,gems:0,multiplier: 2 }
 ];
 function makegoldshoppy() {
   goldshop.innerHTML="";
