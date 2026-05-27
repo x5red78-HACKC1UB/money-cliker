@@ -3,7 +3,8 @@
 //NOTE FUCTIONS MAKEGOLDSHOPPY & BUYGOLDITEM are GEMS/GOLD I DONT FEEL LIKE CHNGING THE NAME
 //SO CONSIDER YOUSELF WARNED
 //lets
-let money = 0; //just read
+document.addEventListener("DOMContentLoaded", () => {
+ let money = 0; //just read
 let mps = 0;
 let startingmpc=0;
 let mpc = 1 +startingmpc;
@@ -405,3 +406,4 @@ spawncoin();
 makeshop(); // the end is here
 makegoldshoppy();
 scoretxt();
+});
